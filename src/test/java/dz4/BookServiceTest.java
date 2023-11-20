@@ -2,6 +2,7 @@ package dz4;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -26,6 +27,7 @@ class BookServiceTest {
     }
 
     @Test
+    @DisplayName("Проверка получить книгу по id")
     void findBookById() {
         String bookId = "10";
         Book book = new Book(bookId);
@@ -38,6 +40,7 @@ class BookServiceTest {
     }
 
     @Test
+    @DisplayName("Проверка получить список книг")
     void findAllBooks() {
         Book book = new Book("10");
         List<Book> list = new ArrayList<>();
