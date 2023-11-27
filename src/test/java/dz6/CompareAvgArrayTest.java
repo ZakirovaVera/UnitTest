@@ -37,32 +37,32 @@ class CompareAvgArrayTest {
         arr.add(2);
         sut = new CompareAvgArray(arr1, arrGreat);
 
-        double result = sut.AvgArray(arr);
+        double result = sut.avgArray(arr);
 
         Assertions.assertEquals(2, result);
     }
 
     @Test
-    @DisplayName("Сравнить среднее двух списков")
+    @DisplayName("Среднее 2го списка больше среднего 1го списка")
     void compareGreatAvgArray2Test() {
         sut = new CompareAvgArray(arr1, arrGreat);
-        sut.CompareArray();
-        Assertions.assertEquals(sut.GreatAvgArray2, sut.getResultMessage());
+        sut.compareArray();
+        Assertions.assertEquals(CompareAvgArray.GREAT_AVG_ARRAY_2, sut.getResultMessage());
     }
 
     @Test
-    @DisplayName("Сравнить среднее двух списков")
+    @DisplayName("Среднее 1го списка больше среднего 2го списка")
     void compareGreatAvgArray1Test() {
         sut = new CompareAvgArray(arrGreat, arr1);
-        sut.CompareArray();
-        Assertions.assertEquals(sut.GreatAvgArray1, sut.getResultMessage());
+        sut.compareArray();
+        Assertions.assertEquals(CompareAvgArray.GREAT_AVG_ARRAY_1, sut.getResultMessage());
     }
 
     @Test
-    @DisplayName("Сравнить среднее двух списков")
+    @DisplayName("Среднее значение двух списков равны")
     void compareEqualityAvgTest() {
         sut = new CompareAvgArray(arrGreat, arrGreat);
-        sut.CompareArray();
-        Assertions.assertEquals(sut.EqualityAvg, sut.getResultMessage());
+        sut.compareArray();
+        Assertions.assertEquals(CompareAvgArray.EQUALITY_AVG, sut.getResultMessage());
     }
 }
